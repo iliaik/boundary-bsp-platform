@@ -1,5 +1,5 @@
-<!-- Everything is pinned with exact revision as it is in the current RELEASE build. BUT only meta-megatral is not. -->
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Everything is pinned with exact revision as it is in the current RELEASE build. BUT only meta-megatral is not. -->
 <manifest>
   <remote name="boundary" fetch="https://github.com/boundarydevices"/>
   <remote name="clang" fetch="https://github.com/kraj"/>
