@@ -1,0 +1,34 @@
+<!-- Everything is pinned with exact revision as it is in the current build. BUT only meta-megatral is not. -->
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="boundary" fetch="https://github.com/boundarydevices"/>
+  <remote name="clang" fetch="https://github.com/kraj"/>
+  <remote name="freescale" fetch="https://github.com/Freescale"/>
+  <remote name="ilyaikik" fetch="ssh://git@github.com/ilyaikik"/>
+  <remote name="meta-qt5" fetch="https://github.com/meta-qt5"/>
+  <remote name="oe" fetch="https://github.com/openembedded"/>
+  <remote name="oss" fetch="https://github.com/OSSystems"/>
+  <remote name="playground" fetch="https://code.qt.io/yocto"/>
+  <remote name="rust" fetch="https://github.com/meta-rust"/>
+  <remote name="yocto" fetch="https://git.yoctoproject.org/git"/>
+
+  <default revision="kirkstone" sync-j="4"/>
+
+  <project name="Documentation" path="sources/Documentation" remote="freescale" revision="7c9ad5c4d9e76e261ddf63fb7bc87fc244f55a38" upstream="kirkstone" dest-branch="kirkstone"/>
+  <project name="megatral-bsp-base" path="sources/base" remote="ilyaikik" revision="44d41a564942ee65f3e3b0d0c401bf0163c2cdbd" upstream="kirkstone" dest-branch="kirkstone">
+    <copyfile src="README.md" dest="README.md"/>
+    <copyfile src="setup-environment" dest="setup-environment"/>
+  </project>
+  <project name="meta-boundary" path="sources/meta-boundary" remote="boundary" revision="6a19853628d8454ae1be0f1ce62e443ef82f17d1" upstream="kirkstone" dest-branch="kirkstone"/>
+  <project name="meta-browser" path="sources/meta-browser" remote="oss" revision="e232c2e21b96dc092d9af8bea4b3a528e7a46dd6"/>
+  <project name="meta-clang" path="sources/meta-clang" remote="clang" revision="c728c3f9168c8a4ed05163a51dd48ca1ad8ac21d"/>
+  <project name="meta-freescale" path="sources/meta-freescale" remote="yocto" revision="3e9ef23d98aa842cf84251a27c9b8dde8925ea61" upstream="kirkstone" dest-branch="kirkstone"/>
+  <project name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty" remote="freescale" revision="1a6ea560015ecda5fff8eccaf5b1327f1bb6c57f" upstream="kirkstone" dest-branch="kirkstone"/>
+  <project name="meta-freescale-distro" path="sources/meta-freescale-distro" remote="freescale" revision="d5bbb487b2816dfc74984a78b67f7361ce404253" upstream="kirkstone" dest-branch="kirkstone"/>
+  <project name="meta-freescale-ml" path="sources/meta-freescale-ml" remote="freescale" revision="e86f4ac6ed3c18c1ed3dd76824fda4dd0e8c4f8d" upstream="kirkstone" dest-branch="kirkstone"/>
+  <!-- This one is NOT pinned -->
+  <project name="meta-megatral" path="sources/meta-megatral" remote="ilyaikik" revision="c7965b302822a44f5a29f962fb57054eb486f25b" upstream="kirkstone" dest-branch="kirkstone"/>
+  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="9c5541f7e18a1fac3b8dea71e1ebb8398d58e6ff" upstream="kirkstone" dest-branch="kirkstone"/>
+  <project name="meta-qt5" path="sources/meta-qt5" remote="meta-qt5" revision="644ebf220245bdc06e7696ccc90acc97a0dd2566" upstream="kirkstone" dest-branch="kirkstone"/>
+  <project name="poky" path="sources/poky" remote="yocto" revision="0e4966eb77928a07230e031d6d9c477c01ec9cce" upstream="kirkstone" dest-branch="kirkstone"/>
+</manifest>
